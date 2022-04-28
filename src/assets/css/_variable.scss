@@ -1,26 +1,10 @@
-// main colors :
-// 1. #6768a9
-// 2. #d2ab67
-// 3. #2051a2
-// bg color => #fff
 
 $firstFontFamily: iranyekan;
 $secondFontFamily: Shabnam;
 
 $bgColor: #F9F9F9;
 
-$firstColor: #4b4c91;
-$secondColor: #d2ab67;
-$thirdColor: #2051a2;
-$forthColor: #f2e1f9;
-
-$color-gray: #4f5052;
-$color-pink: #f33066;
-$color-green: #10b981;
-$color-orange: #ff9b20;
-$color-blue: #89b0fa;
 $color-secondary: #E9EBEF;
-$color-light: #f5f4f4;
 $color-dark: #717171;
 
 $fs-xsmall: 8pt;
@@ -31,40 +15,13 @@ $fs-large: 12pt;
 $fs-xlarge: 13pt;
 $fs-xxlarge: 14pt;
 
-$shadowOne: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-$shadowTwo: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
-$shadowThree: rgba(149, 157, 165, 0.2) 0px 8px 24px 0px;
+$box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 
 $borderOne:1px solid rgb(232, 232, 237);
 
-.pf-veryPeri{
-    color: $firstColor;
-}
-.pf-gray{
-    color: $color-gray;
-}
-.pf-pink{
-    color: $color-pink;
-}
-.pf-green{
-    color: $color-green;
-}
-.pf-orange{
-    color: $color-orange;
-}
-.pf-blue{
-    color:$color-blue;
-}
-.pf-secondary{
+.tarkhine-secondary{
     color: $color-secondary;
 }
-.pf-dark{
+.tarkhine-dark{
     color: $color-dark;
-}
-
-.mt-6{
-    margin-top: 6.25rem;
-}
-.fs-7{
-    font-size: 1.2rem!important;
 }

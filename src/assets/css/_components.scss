@@ -1,12 +1,15 @@
-
+.category-title{
+  padding-right: 2rem;
+}
 .mini-card{
   position: relative;
   border-radius: 10px;
   margin: 2rem 0 3rem 0;
   img{
-    width: 100%;
+    width: 198px;
     height: 83px;
     border-radius: 10px;
+    filter: brightness(65%);
   }
   .text{
     position:absolute;
@@ -15,7 +18,7 @@
     left:0;
     p{
       color:#fff;
-      font-size: 20px;
+      font-size: $fs-xxlarge;
       font-weight: 700;
       text-align: center;
     }
@@ -31,7 +34,7 @@
   margin-right: 0!important;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: $box-shadow;
   overflow: hidden;
   width: 416px;
   padding:0!important;
