@@ -1,0 +1,199 @@
+/*..................... The Header ..............................*/
+.navbar{
+  padding: 1.25rem 2rem!important;
+}
+.navbar-menu{
+  background-color: #ffffff;
+  box-shadow: $shadowOne;
+}
+.nav-link{
+  color: #000000;
+  padding: 10px 15px !important;
+}
+.nav-link:hover{
+  background: $color-light;
+  border-radius: 5px;
+  box-shadow: rgb(204, 219, 232) 3px 4px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.b-icon.bi{
+  font-size: 25px;
+}
+.login-icon{
+  margin-left: 10px;
+  margin-top: 3px;
+}
+.dropdown-menu{
+  width: 200px;
+  border-radius: 13px!important;
+  box-shadow: $shadowOne !important;
+  border: solid 1px #e6e6e6 !important;
+}
+.dropdown-item{
+  text-align: right!important;
+}
+// TopCover Styles ------------------------------------------------------------
+
+.pf-btn{
+  background-color: $firstColor !important;
+  border-radius: 10px!important;
+  padding: 0.75rem 1.2rem!important;
+  margin-top: 1rem;
+}
+.pf-btn2{
+  background-color: $secondColor !important;
+  border-radius: 10px!important;
+  padding: 0.75rem 1.2rem!important;
+  margin-top: 1.5rem;
+}
+// Cards and Boxs Styles ------------------------------------------------------------
+.pf-card .card-body{
+  padding: 0!important;
+}
+.card-icon{
+  font-size: 17px!important;
+}
+.pf-card  p{
+  font-size: 14px;
+  padding: 1rem;
+  margin-bottom: 0!important;
+}
+.pf-card {
+  padding: 20px;
+  box-shadow: $shadowThree;
+  border:0!important;
+}
+.pf-card img {
+  width: 100%;
+  height: 100%;
+}
+.card-img-top{
+  cursor: pointer!important;
+}
+
+// Accordion Styles ----------------------------------------------------------------
+.category .card{
+  border:0!important;
+}
+.category .card-header{
+  margin-top: 1.5rem ;
+  background-color: transparent!important;
+}
+.category h6{
+  margin-right: 1rem;
+  font-size: $fs-normal;
+  font-weight: 600;
+}
+
+// Select and Tree Select Styles ----------------------------------------------------------------
+.vue-treeselect__control{
+  border:none!important;
+}
+.vue-treeselect__control-arrow-container{
+  position: relative;
+  min-height: 40px;
+  display: block;
+  padding: 8px 40px 0 8px;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 14px;
+}
+.vue-treeselect__control-arrow{
+  content: "";
+  position: absolute;
+  top:12px;
+  left: 12px;
+  border:2px solid;
+  border-color: transparent transparent $firstColor $firstColor;
+  transform: rotate(-45deg);
+  color: transparent!important;
+}
+.vue-treeselect__control-arrow--rotated{
+  transform: rotateZ(-222deg) !important;
+  top:15px!important;
+}
+.vue-treeselect__menu-container .vue-treeselect__menu{
+  border:none!important;
+  display: block!important;
+  opacity: 1;
+  box-shadow: $shadowOne !important;
+}
+.vue-treeselect__placeholder{
+  font-size: 10pt;
+}
+.vue-treeselect__multi-value-item{
+  color: $firstColor!important;
+}
+.vue-treeselect__multi-value-item{
+  background: $firstColor !important;
+  color: #fff !important;
+}
+.vue-treeselect__value-remove{
+  color: #fbd9d9 !important;
+}
+.vue-treeselect__menu ul {
+  display: block !important;
+}
+/* range slider styles ----------------------------------------------- */
+.slider-base {
+  margin: 0px 0px;
+  background-color: #ebeff2 !important;
+  border-radius: 5px;
+}
+.slider-connect {
+  background: $firstColor !important;
+  cursor: pointer;
+}
+.slider-tooltip {
+  position: absolute;
+  display: block;
+  font-size: 0.9rem !important;
+  line-height: 1.25rem;
+  font-weight:400 !important;
+  white-space: nowrap;
+  padding: 2px 6px;
+  min-width: 20px;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid  $firstColor !important;
+  background: $firstColor !important;
+}
+.slider-txt-dir-rtl.slider-horizontal .slider-origin {
+  right: -320px !important;
+  left: auto !important;
+}
+
+/* toggleButton styles ----------------------------------------------- */
+.vue-js-switch .v-switch-label.v-left[data-v-25adc6c0]{
+  left:0!important;
+}
+.vue-js-switch[data-v-25adc6c0]{
+  margin-right: 3.75rem!important;
+}
+
+
+/*..................... Footer ..............................*/
+.footer{
+  background-color: $forthColor ;
+}
+.footer p{
+  text-align: justify;
+}
+.footer ul{
+  list-style: none;
+}
+.footer .b-icon.bi {
+  margin-left: 30px;
+  margin-top: 30px;
+  color: $firstColor;
+}
+.sub-footer{
+  background-color: $firstColor;
+  height: 2.5rem;
+  color:#ffffff;
+}
+.input-code{
+  width: 40px!important;
+  margin-top: 10px;
+}

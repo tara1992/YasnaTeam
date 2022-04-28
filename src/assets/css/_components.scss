@@ -1,0 +1,123 @@
+
+.mini-card{
+  position: relative;
+  border-radius: 10px;
+  margin: 2rem 0 3rem 0;
+  img{
+    width: 100%;
+    height: 83px;
+    border-radius: 10px;
+  }
+  .text{
+    position:absolute;
+    top:30%;
+    right:0;
+    left:0;
+    p{
+      color:#fff;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+}
+.custom-card{
+  display: flex;
+  justify-content: center;
+}
+.card {
+  border:0!important;
+  margin-bottom:1.5rem;
+  margin-right: 0!important;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  width: 416px;
+  padding:0!important;
+
+  .card-body{
+    padding: 0;
+  }
+
+  .header {
+    position: relative;
+    img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0 ;
+      padding: 0!important;
+    }
+    .tag{
+      position: absolute;
+      top:16px;
+      right:16px;
+      width: 57px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-secondary;
+      color:#1E385A;
+      font-size: $fs-meduim;
+      border-radius: 4px;
+    }
+  }
+  .card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 17px 0 17px;
+    h3{
+      font-size: $fs-large;
+      font-weight: 700;
+      color:#424242;
+      margin: 0;
+    }
+    p{
+      font-size: 14px;
+      line-height: 25px;
+      text-align: right;
+      font-weight: 700;
+      color: #717171;
+      margin-top: 0.5rem;
+    }
+  }
+  .user{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    img{
+      border-radius: 50%;
+      width:48px;
+      height: 48px;
+      margin-right: 10px;
+    }
+    h5{
+      margin: 5px 8px 0 0;
+      font-size: $fs-meduim;
+      font-weight: 700;
+    }
+    p{
+      margin: -20px 0 24px 70px ;
+      font-size: $fs-meduim;
+      text-align: center;
+    }
+    .comment{
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      padding:0 0 20px 25px;
+
+      .b-icon.bi{
+        color: $color-dark!important;
+        padding-left: 0.5rem;
+      }
+      span{
+        font-size: $fs-meduim;
+      }
+    }
+  }
+}

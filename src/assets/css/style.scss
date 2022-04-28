@@ -1,0 +1,42 @@
+@import "font";
+@import "variable";
+@import "custom";
+@import "components";
+@import "responsive";
+
+
+/*
+bg color => #fff
+bg btn => #6768a9
+first color =>  #d2ab67
+second color => #2051a2
+*/
+
+body{
+  font-family: $firstFontFamily !important ;
+  background: $bgColor;
+  color:$color-dark;
+  direction: rtl;
+  margin: 57px 30px;
+}
+ h1{
+   font-size: 1.5rem;
+   font-weight: 700;
+ }
+
+
+//.row{
+//  margin-left: 0!important;
+//  margin-right: 0!important;
+//}
+a{
+  text-decoration: none!important;
+  color: #000!important;
+  cursor: pointer;
+}
+ul{
+  list-style: none;
+}
+.mr--3{
+  margin-right: -30px;
+}

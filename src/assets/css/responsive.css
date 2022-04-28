@@ -1,0 +1,85 @@
+/* ======== responsive act ------------ */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 280px)
+and (max-device-width : 440px){
+    .container-fluid{
+        margin:0;
+        padding: 0;
+    }
+    .row{
+        padding: 0;
+    }
+    .card .header img{
+        height: 100%;
+    }
+    .card .header .tag{
+        width: 50px;
+        height: 28px;
+        font-size: 12px;
+    }
+    .card .card-text h3{
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .card .card-text p{
+        font-weight: 500;
+    }
+    .card .user{
+        margin: 0.5rem 0.2rem;
+    }
+    .card .user img{
+        width: 32px;
+        height: 32px;
+        margin-right: 0;
+    }
+    .card .user h5{
+        font-size:12px;
+        font-weight: 500;
+    }
+    .card .user p{
+        font-size:12px;
+        font-weight: 500;
+        text-align: right;
+        margin:-10px 40px 24px 0;
+    }
+    .card .user .comment span{
+        font-size: 9pt;
+    }
+    .card .user .comment .b-icon.bi{
+        font-size: 16pt;
+    }
+
+}
+
+@media only screen
+and (max-device-width : 767px) {
+
+
+}
+
+
+
+/* tablet ----------------------------------------------------------------------------------------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 991px) {
+
+}
+
+
+
+
+@media only screen
+and (min-device-width : 992px)
+and (max-device-width : 1200px) {
+
+}
+
+@media only screen
+and (max-device-width : 991px) {
+
+
+
+
+}
