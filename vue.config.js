@@ -1,8 +1,6 @@
 module.exports = {
   devServer:
-  {
-    proxy: "https://tarkhineh.yasna.live"
-  },
+      {
+        proxy: "https://tarkhineh-api.yasna.live"
+      },
 }
-
-//این آدرس رو هم چک کردم  https://tarkhineh.yasna.live/api

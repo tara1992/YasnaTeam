@@ -1,110 +1,246 @@
 /* ======== responsive act ------------ */
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen
-and (min-device-width : 280px)
-and (max-device-width : 820px){
-    .container-fluid{
-        margin:0;
+and (min-device-width: 280px)
+and (max-device-width: 820px) {
+    .hideDesktop {
+        display: block !important;
+    }
+
+    .container-fluid {
+        margin: 0;
         padding: 0;
     }
-    .row{
+
+    .row {
         padding: 0;
     }
-    .category-title{
-        font-size: 1.25rem!important;
+
+    .category-title {
+        font-size: 1.25rem !important;
     }
-    .category-container{
+
+    .category-container {
         display: flex;
-        flex-wrap: nowrap ;
+        flex-wrap: nowrap;
         width: 100%;
         overflow: scroll;
     }
-    .mini-card{
+
+    .category-container .mini-card {
         width: 165px;
         height: 69px;
-        margin-left:24px ;
+        margin-left: 50px;
         margin-bottom: 2rem;
         border-radius: 5px;
     }
-    .mini-card .text{
-        top:40%;
+
+    .mini-card .text {
+        top: 40%;
     }
-    .mini-card .text p{
+
+    .mini-card .text p {
         font-size: 16px;
+        margin-right: 20px;
     }
-    .custom-card{
+
+    .custom-card {
         margin-top: 1rem;
     }
-    .card .header img{
+
+    .card .header img {
         height: 100%;
     }
-    .card .header .tag{
+
+    .card .header .tag {
         width: 50px;
         height: 28px;
         font-size: 12px;
     }
-    .card .card-text h3{
+
+    .card .card-text h3 {
         font-size: 14px;
         font-weight: 500;
     }
-    .card .card-text p{
+
+    .card .card-text p {
         font-weight: 500;
     }
-    .card .user{
+
+    .card .user {
         margin: 0.5rem 0.2rem;
     }
-    .card .user img{
+
+    .card .user img {
         width: 32px;
         height: 32px;
         margin-right: 0;
     }
-    .card .user h5{
-        font-size:12px;
+
+    .card .user h5 {
+        font-size: 12px;
         font-weight: 500;
     }
-    .card .user p{
-        font-size:12px;
+
+    .card .user p {
+        font-size: 12px;
         font-weight: 500;
         text-align: right;
-        margin:-10px 40px 24px 0;
+        margin: -10px 40px 24px 0;
     }
-    .card .user .comment span{
+
+    .card .user .comment span {
         font-size: 9pt;
     }
-    .card .user .comment .b-icon.bi{
+
+    .card .user .comment .b-icon.bi {
         font-size: 16pt;
     }
 
+
+    .top-pic img {
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+    }
+
+    .content h1 {
+        font-size: 15pt;
+        margin: 24px 0;
+    }
+
+    .position-res {
+        flex-direction: column;
+    }
+
+    .position-res p {
+        margin-right: 0 !important;
+    }
+
+    .content .text p {
+        font-size: 10.5pt;
+        margin-bottom: 0;
+    }
+
+    .content .text h2 {
+        font-size: 12pt;
+        margin: 3rem 0 1rem 0 !important;
+    }
+
+    .content .text img {
+        margin: 0 !important;
+    }
+
+    .video .c-video video {
+        height: auto;
+    }
+
+    .video .c-video {
+        height: auto;
+    }
+
+    .video .c-video .btn-play img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .content .text .tag {
+        margin: 2rem 0 1rem 0 !important;
+    }
+
+    .connection {
+        flex-direction: column;
+        margin-top: 1rem
+    }
+
+    .connection .share {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1.5rem;
+    }
+
+    .share ul {
+        padding: 0 !important;
+    }
+
+    .connection .share .b-icon.bi {
+        font-size: 16pt;
+    }
+
+    .connection .share li {
+        padding-left: 2rem;
+    }
+
+    .writer-post {
+        margin-top: 1.5rem !important;
+    }
+
+    .writer-post .user {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1.5rem;
+    }
+
+    .writer-post .user h5 {
+        padding-top: 5px;
+    }
+
+    .writer-post p {
+        text-align: center !important;
+        margin-top: 0.75rem;
+        padding: 0 1.5rem;
+    }
+
+    .single-category {
+        width: 100%;
+        margin-top: 1rem;
+        line-height: 24px;
+        padding: 1.5rem 1rem;
+    }
+
+    .single-category h1 {
+        margin-bottom: 2rem;
+    }
+
+    .single-category .mini-card img {
+        height: 105px;
+    }
+
+    .single-category .mini-card p {
+        font-size: 15pt !important;
+        margin-right: 0 !important;
+    }
+
+    .single-category .category-container .mini-card {
+        width: 100% !important;
+        height: auto;
+        margin: 0 0 1.5rem 0 !important;
+    }
+
+    .single-category .category-container {
+        overflow: hidden !important;
+        display: block;
+    }
+
 }
-
-@media only screen
-and (max-device-width : 767px) {
-
-
-}
-
 
 
 /* tablet ----------------------------------------------------------------------------------------- */
 @media only screen
-and (min-device-width : 768px)
-and (max-device-width : 991px) {
+and (min-device-width: 768px)
+and (max-device-width: 991px) {
 
 }
 
 
-
-
 @media only screen
-and (min-device-width : 992px)
-and (max-device-width : 1200px) {
+and (min-device-width: 992px)
+and (max-device-width: 1200px) {
 
 }
 
 @media only screen
-and (max-device-width : 991px) {
-
-
+and (max-device-width: 991px) {
 
 
 }

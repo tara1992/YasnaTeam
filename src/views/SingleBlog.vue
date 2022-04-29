@@ -3,8 +3,11 @@
     <b-container fluid>
       <b-row>
         <b-col lg="8" md="8" sm="12" class="content">
+          <div class="top-pic hideDesktop">
+            <img src="@/assets/img/res-pic.png" alt="image"/>
+          </div>
           <h1>این طرز تهیه خورشت قیمه را هیچ جا ندیده اید!</h1>
-          <div class="d-flex mt-4">
+          <div class="position-res d-flex mt-4">
             <p>
               <b-icon icon="calendar2" aria-hidden="true"></b-icon>
               <span>1400/09/21</span>
@@ -56,20 +59,21 @@
             </div>
             <div class="video">
               <h2> ویدئو طرز تهیه خورش قیمه</h2>
-                <div class="c-video ">
-                  <video ref="video" src="@/assets/img/video-1.mp4" poster="@/assets/img/single-big-pic.png"
-                         controls></video>
-                  <div class="controls">
-                    <button ref="btnPlay" class="btn-play" @click="togglePlayPause()">
-                      <img src="@/assets/img/btnvideo.png"/>
-                    </button>
-                  </div>
+              <div class="c-video ">
+                <video ref="video" src="@/assets/img/video-1.mp4" poster="@/assets/img/single-big-pic.png"
+                       controls></video>
+                <div class="controls">
+                  <button ref="btnPlay" class="btn-play" @click="togglePlayPause()">
+                    <img src="@/assets/img/btnvideo.png"/>
+                  </button>
                 </div>
-
+              </div>
             </div>
             <div class="tag">
               <h3>تگ ها: </h3>
-              <span>هشتگ اول، هشتگ سوم، هشتگ مرتبط، آشپزی، وبلاگ</span>
+              <div v-for="tag in tags" :key="tag.id">
+                <a href="#">{{ tag.label }}</a>
+              </div>
             </div>
             <hr/>
             <div class="connection">
@@ -103,7 +107,6 @@
               <div class="user">
                 <img src="@/assets/img/avatar-1.svg" alt="user"/>
                 <h5>لادن مینایی</h5>
-
               </div>
               <p>
                 دانشجوی ژنتیک دانشگاه اصفهان - عاشق روانشناسی و نویسندگی
@@ -134,14 +137,17 @@
 
 <script>
 
+import {mapGetters} from "vuex";
+
 export default {
-  name: "Templates",
+  name: "SingleBlog",
   components: {},
   data() {
-
     return {
       videoPause: false,
       videoPlay: false,
+      post: {},
+
       items: [
         {id: 1, text: '1/2 لیوان لپه'},
         {id: 2, text: '2 عدد پیاز'},
@@ -155,13 +161,30 @@ export default {
         {id: 10, text: 'سیب زمینی سرخ کرده'},
       ],
       images: [
-        {id: 1, pic: require('@/assets/img/mini-card-1.jpg'), caption: 'آشبزی'},
+        {id: 1, pic: require('@/assets/img/mini-card-1.jpg'), caption: 'آشپزی'},
         {id: 2, pic: require('@/assets/img/mini-card-2.jpg'), caption: 'سبک زندگی'},
         {id: 3, pic: require('@/assets/img/mini-card-3.jpg'), caption: 'سلامت'},
         {id: 4, pic: require('@/assets/img/mini-card-4.jpg'), caption: 'دانستنی'},
         {id: 5, pic: require('@/assets/img/mini-card-5.jpg'), caption: 'اخبار ترخینه'},
         {id: 6, pic: require('@/assets/img/mini-card-6.jpg'), caption: 'تازه ها'},
       ],
+      tags: [
+        {id: 1, label: 'هشتگ اول،'},
+        {id: 1, label: 'هشتگ سوم،'},
+        {id: 1, label: 'هشتگ مرتبط،'},
+        {id: 1, label: 'آشپزی،'},
+        {id: 1, label: 'وبلاگ'}
+      ],
+    }
+  },
+  computed: {
+    ...mapGetters({
+      posts: 'posts',
+    }),
+  },
+  watch: {
+    posts() {
+      this.post = this.posts.find(e => e.id == this.$route.params.id);
     }
   },
   methods: {
@@ -173,13 +196,16 @@ export default {
         this.videoPause = !this.videoPause
         video.play();
         btnPlay.style.opacity = '0';
-        video.style.filter='brightness(100%)';
+        video.style.filter = 'brightness(100%)';
       } else {
         video.pause();
         btnPlay.style.opacity = '1';
-        video.style.filter='brightness(80%)';
+        video.style.filter = 'brightness(80%)';
       }
     }
+  },
+  beforeCreate() {
+    this.$store.dispatch('getPosts');
   }
 
 }

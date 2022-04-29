@@ -14,7 +14,7 @@ const routes = [
       },
     },
     {
-      path: '/SingleBlog',
+      path: '/SingleBlog/:id',
       name: 'SingleBlog',
       component: () => import('../views/SingleBlog.vue'),
       meta: {
