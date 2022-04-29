@@ -1,4 +1,5 @@
 @import "font";
+//@import "../icons/style";
 @import "variable";
 @import "components";
 @import "responsive";
@@ -22,6 +23,10 @@ body{
 h2{
   font-size: 15pt;
   font-weight: 700;
+}
+ul{
+  list-style: none;
+  display: flex;
 }
 
 

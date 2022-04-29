@@ -17,16 +17,16 @@
         </div>
       </div>
 
-
-
-        <!--        <b-col lg="2" md="2" sm="2"  v-for="category in categories" :key="category.id">-->
-        <!--          <div class="mini-card">-->
-        <!--            <img :src="category[0].link" alt="image"/>-->
-        <!--            <div class="text">-->
-        <!--              <p>{{ category.title }}</p>-->
-        <!--            </div>-->
-        <!--          </div>-->
-        <!--        </b-col>-->
+<!--      <div class="category-container">-->
+<!--        <div class="d-flex justify-content-around">-->
+<!--          <div class="mini-card" v-for="category in categories" :key="category.id">-->
+<!--            <img :src="category[0].link" alt="image"/>-->
+<!--            <div class="text">-->
+<!--              <p>{{ category.title }}</p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
 
       <b-row>
         <b-col lg="4" md="6" sm="1" v-for="card in cardBody" :key="card.id" class="custom-card">

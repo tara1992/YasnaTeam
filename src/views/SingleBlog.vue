@@ -55,24 +55,77 @@
               </p>
             </div>
             <div class="video">
-              <div class="col-lg-5 col-md-8 col-sm-12 position-video-res d-flex">
-                <div class="c-viedo">
-                  <video class="video" src="@/assets/img/video-1.mp4" poster="@/assets/img/single-big-pic.png"
+              <h2> ویدئو طرز تهیه خورش قیمه</h2>
+                <div class="c-video ">
+                  <video ref="video" src="@/assets/img/video-1.mp4" poster="@/assets/img/single-big-pic.png"
                          controls></video>
                   <div class="controls">
-                    <button id="play-pause" class="btn-play" @click="togglePlayPause()">
+                    <button ref="btnPlay" class="btn-play" @click="togglePlayPause()">
                       <img src="@/assets/img/btnvideo.png"/>
                     </button>
                   </div>
                 </div>
-                <video ref="videoRef" src="" id="video-container" width="100%" controls></video>
+
+            </div>
+            <div class="tag">
+              <h3>تگ ها: </h3>
+              <span>هشتگ اول، هشتگ سوم، هشتگ مرتبط، آشپزی، وبلاگ</span>
+            </div>
+            <hr/>
+            <div class="connection">
+              <div class="short-link">
+                <span>لینک کوتاه </span>
+                <a href="">https://rby.com/features</a>
+                <b-icon icon="files" aria-hidden="true"></b-icon>
+              </div>
+              <div class="share">
+                <h4>اشتراک گذاری </h4>
+                <ul>
+                  <li><a href="">
+                    <b-icon icon="facebook" aria-hidden="true"></b-icon>
+                  </a></li>
+                  <li><a href="">
+                    <b-icon icon="whatsapp" aria-hidden="true"></b-icon>
+                  </a></li>
+                  <li><a href="">
+                    <b-icon icon="files" aria-hidden="true"></b-icon>
+                  </a></li>
+                  <li><a href="">
+                    <b-icon icon="twitter" aria-hidden="true"></b-icon>
+                  </a></li>
+                  <li><a href="">
+                    <b-icon icon="telegram" aria-hidden="true"></b-icon>
+                  </a></li>
+                </ul>
               </div>
             </div>
+            <div class="writer-post">
+              <div class="user">
+                <img src="@/assets/img/avatar-1.svg" alt="user"/>
+                <h5>لادن مینایی</h5>
 
+              </div>
+              <p>
+                دانشجوی ژنتیک دانشگاه اصفهان - عاشق روانشناسی و نویسندگی
+                من خستگی ناپذیرم، خستگی ناپذیر از سفر کردن، دیدن چیزهای جدید و نوشتن
+              </p>
+            </div>
           </div>
         </b-col>
         <b-col lg="4" md="4" sm="12">
-
+          <div class="single-category">
+            <h1>دسته بندی</h1>
+            <div class="category-container">
+              <div class="">
+                <div class="mini-card" v-for="image in images" :key="image.id">
+                  <img :src="image.pic" alt="image"/>
+                  <div class="text">
+                    <p>{{ image.caption }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </b-col>
       </b-row>
     </b-container>
@@ -87,7 +140,8 @@ export default {
   data() {
 
     return {
-      paused: false,
+      videoPause: false,
+      videoPlay: false,
       items: [
         {id: 1, text: '1/2 لیوان لپه'},
         {id: 2, text: '2 عدد پیاز'},
@@ -99,16 +153,33 @@ export default {
         {id: 8, text: '2 قاشق چای خوری زعفران دم کرده'},
         {id: 9, text: '1 قاشق غذاخوری گلاب'},
         {id: 10, text: 'سیب زمینی سرخ کرده'},
-      ]
+      ],
+      images: [
+        {id: 1, pic: require('@/assets/img/mini-card-1.jpg'), caption: 'آشبزی'},
+        {id: 2, pic: require('@/assets/img/mini-card-2.jpg'), caption: 'سبک زندگی'},
+        {id: 3, pic: require('@/assets/img/mini-card-3.jpg'), caption: 'سلامت'},
+        {id: 4, pic: require('@/assets/img/mini-card-4.jpg'), caption: 'دانستنی'},
+        {id: 5, pic: require('@/assets/img/mini-card-5.jpg'), caption: 'اخبار ترخینه'},
+        {id: 6, pic: require('@/assets/img/mini-card-6.jpg'), caption: 'تازه ها'},
+      ],
     }
   },
   methods: {
-           togglePlayPause() {
-             var video = document.getElementById('video-container');
+    togglePlayPause() {
+      var video = this.$refs.video;
+      var btnPlay = this.$refs.btnPlay;
 
-             video.src = "@/assets/img/video-1.mp4";
-             video.play();
-           }
+      if (video.paused) {
+        this.videoPause = !this.videoPause
+        video.play();
+        btnPlay.style.opacity = '0';
+        video.style.filter='brightness(100%)';
+      } else {
+        video.pause();
+        btnPlay.style.opacity = '1';
+        video.style.filter='brightness(80%)';
+      }
+    }
   }
 
 }
