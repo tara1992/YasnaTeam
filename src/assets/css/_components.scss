@@ -1,3 +1,4 @@
+//..............................Blog Style..............................
 .category-title{
   padding-right: 2rem;
 }
@@ -120,7 +121,87 @@
       }
       span{
         font-size: $fs-meduim;
+        color:$first-color;
       }
     }
   }
+}
+//..............................SingleBlog Style..............................
+.content{
+  color:$first-color;
+  .b-icon.bi{
+    margin-left:10px;
+  }
+  span{
+    font-size: $fs-meduim;
+  }
+  .text{
+    margin-top: 1.5rem;
+    p{
+      font-size: $fs-large;
+      line-height: 28px;
+      text-align: justify;
+      margin-bottom: 3.5rem;
+    }
+    img{
+      margin: 2rem 0 2.5rem 0;
+      border-radius: 10px;
+    }
+    .b-icon.bi{
+      font-size: 5pt;
+    }
+    span{
+      font-size:$fs-normal;
+    }
+    .description{
+      margin-top:2.5rem;
+      p{
+        margin-bottom: 2.5rem;
+      }
+      h2{
+        margin-bottom: 1.75rem;
+      }
+    }
+  }
+}
+.video{
+  opacity:1;
+}
+.disvideo{
+  opacity: 0;
+}
+.c-viedo{
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+}
+.c-viedo video{
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  filter: brightness(40%);
+}
+.btn-play{
+  border:none;
+  background-color: transparent;
+}
+.btn-play img{
+  width: 70px;
+  height: 70px;
+}
+.controls{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.text-video p{
+  font-size: 10pt;
+  color:#FFFFFF;
+  margin-top: 10px;
 }
