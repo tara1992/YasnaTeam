@@ -1,6 +1,12 @@
+// module.exports = {
+//   devServer:
+//       {
+//         proxy: "https://tarkhineh-api.yasna.live"
+//       },
+// }
+
 module.exports = {
-  devServer:
-      {
-        proxy: "https://tarkhineh-api.yasna.live"
-      },
-}
+    devServer: {
+        proxy: 'https://tarkhineh-api.yasna.live/',
+    },
+};

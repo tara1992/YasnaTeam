@@ -33,6 +33,7 @@
 .custom-card {
   display: flex;
   justify-content: center;
+  height: auto;
 }
 
 .card {
@@ -45,6 +46,7 @@
   overflow: hidden;
   width: 416px;
   padding: 0 !important;
+
 
   .card-body {
     padding: 0;
@@ -82,6 +84,8 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 24px 17px 0 17px;
+    margin-bottom: 5rem;
+
 
     h3 {
       font-size: $fs-large;
@@ -107,7 +111,10 @@
   .user {
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
 
     img {
       border-radius: 50%;
@@ -123,7 +130,7 @@
     }
 
     p {
-      margin: -20px 0 24px 70px;
+      margin: -20px 0 24px 58px;
       font-size: $fs-meduim;
       text-align: center;
     }
@@ -185,7 +192,6 @@
     }
 
     .description {
-      margin-top: 2.5rem;
 
       p {
         margin-bottom: 2.5rem;

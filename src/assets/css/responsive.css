@@ -74,7 +74,7 @@ and (max-device-width: 820px) {
     .card .user img {
         width: 32px;
         height: 32px;
-        margin-right: 0;
+        margin-right: -20px;
     }
 
     .card .user h5 {
@@ -86,7 +86,7 @@ and (max-device-width: 820px) {
         font-size: 12px;
         font-weight: 500;
         text-align: right;
-        margin: -10px 40px 24px 0;
+        margin: -10px 23px 24px 0;
     }
 
     .card .user .comment span {
